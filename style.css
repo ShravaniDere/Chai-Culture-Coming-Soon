@@ -14,9 +14,9 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow: hidden; /* To keep particles inside */
+    overflow: hidden;
 }
-/* Particle background */
+
 body::before {
     content: "";
     position: absolute;
@@ -32,7 +32,7 @@ body::before {
 
 .container {
     position: relative;
-    z-index: 1; /* Ensure content is above particles */
+    z-index: 1; 
 }
 
 .container {
@@ -43,7 +43,6 @@ body::before {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Brand Image Animation */
 .brand-image {
     width: 100%;
     max-width: 250px;
@@ -57,7 +56,6 @@ body::before {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Headings and text */
 h1 {
     font-size: 2em;
     color: #4b2e2e;
@@ -66,7 +64,7 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    color: #a67c52; /* Gold-ish */
+    color: #a67c52; 
     margin-bottom: 10px;
 }
 
@@ -75,7 +73,6 @@ p {
     margin-bottom: 20px;
 }
 
-/* Email Signup Button */
 #signup-form {
     display: flex;
     justify-content: center;
@@ -93,7 +90,7 @@ p {
 #signup-form button {
     padding: 10px 15px;
     border: none;
-    background-color: #a67c52; /* Gold-ish */
+    background-color: #a67c52;
     color: white;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
@@ -116,11 +113,11 @@ p {
 }
 
 .launching-soon:hover {
-    color: #a67c52; /* Gold-ish highlight */
+    color: #a67c52;
     transform: translateY(-3px);
 }
 
-/* Social Icons */
+
 .social-icons a img {
     width: 30px;
     margin: 0 10px;
@@ -131,7 +128,6 @@ p {
     transform: scale(1.1);
 }
 
-/* Mobile Responsive */
 @media (max-width: 600px) {
     .container {
         width: 90%;
@@ -148,5 +144,6 @@ p {
 }
 @keyframes floatParticles {
     0% { background-position: 0 0; }
-    100% { background-position: 0 -400px; } /* moves particles up */
+    100% { background-position: 0 -400px; } 
 }
+
