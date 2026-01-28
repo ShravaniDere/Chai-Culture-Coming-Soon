@@ -1,0 +1,152 @@
+/* Reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background: linear-gradient(180deg, #f7f2ec 0%, #f0e2d6 100%);
+    color: #4b2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; /* To keep particles inside */
+}
+/* Particle background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,215,0,0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: floatParticles 20s linear infinite;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above particles */
+}
+
+.container {
+    max-width: 500px;
+    padding: 25px;
+    background-color: #fff8f0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Brand Image Animation */
+.brand-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Headings and text */
+h1 {
+    font-size: 2em;
+    color: #4b2e2e;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #a67c52; /* Gold-ish */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Email Signup Button */
+#signup-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#signup-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    flex: 1;
+}
+
+#signup-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #a67c52; /* Gold-ish */
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#signup-form button:hover {
+    background-color: #8c6239;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Launching Soon Animation */
+.launching-soon {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+.launching-soon:hover {
+    color: #a67c52; /* Gold-ish highlight */
+    transform: translateY(-3px);
+}
+
+/* Social Icons */
+.social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+@keyframes floatParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -400px; } /* moves particles up */
+}
